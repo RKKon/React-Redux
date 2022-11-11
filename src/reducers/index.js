@@ -24,6 +24,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 heroesLoadingStatus: 'error'
             }
+            
         // Filters heroes
         case 'FILTERS_FETCHING':
             return {
