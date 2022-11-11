@@ -3,14 +3,14 @@ import { compose } from 'redux';
 import heroes from '../reducers/heroes';
 import filters from '../reducers/filters';
 
-const strMiddleware = (store) => (dispatch) => (action) => {
-  if (typeof action === 'string') {
-    return dispatch({
-      type: action
-    })
-  }
-  return dispatch(action)
-}
+// const strMiddleware = (store) => (dispatch) => (action) => {
+//   if (typeof action === 'string') {
+//     return dispatch({
+//       type: action
+//     })
+//   }
+//   return dispatch(action)
+// }
 
 const enhancer = (createStore) => (...args) => {// if in store comes not object(str or function)
   const store = createStore(...args);
