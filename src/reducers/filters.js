@@ -1,4 +1,4 @@
-const initialState = {
+/* const initialState = { //! don't need because of filtersSlice.js 
   filters: [],
   filtersLoadingStatus: 'idle',
   activeFilter: 'all'
@@ -31,4 +31,4 @@ const filters = (state = initialState, action) => {
   }
 }
 
-export default filters;
+export default filters; */
