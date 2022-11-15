@@ -10,7 +10,7 @@ import Spinner from '../spinner/Spinner';
 
 
 const HeroesList = () => {
-    
+
     const filteredHeroesSelector = createSelector(
         (state) => state.filters.activeFilter,
         selectAll,
