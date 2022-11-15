@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup  } from 'react-transition-group';
 import { createSelector } from 'reselect';
 
 //import { fetchHeroes } from '../../actions';
-import { heroDeleted, fetchHeroes } from './HeroesSlice';
+import { heroDeleted, fetchHeroes, selectAll } from './HeroesSlice';
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from '../spinner/Spinner';
 
@@ -14,7 +14,7 @@ const HeroesList = () => {
 
     const filteredHeroesSelector = createSelector(
         (state) => state.filters.activeFilter,
-        (state) => state.heroes.heroes,
+        selectAll,
         (filters, heroes) => {
             if (filters === 'all') {
                 return heroes;

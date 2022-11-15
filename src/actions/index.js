@@ -1,6 +1,6 @@
 // import { createAction } from "@reduxjs/toolkit";
 // import {heroesFetching, heroesFetched, heroesFetchingError} from '../components/heroesList/HeroesSlice';
-import {filtersFetching, filtersFetched, filtersFetchingError} from '../components/heroesFilters/FiltersSlice';
+// import {filtersFetching, filtersFetched, filtersFetchingError} from '../components/heroesFilters/FiltersSlice';
 
 //! don't needed. Used other version in heroesSlice (fetchHeroes)
 // export const fetchHeroes = (request) => (dispatch) => { 
@@ -9,12 +9,12 @@ import {filtersFetching, filtersFetched, filtersFetchingError} from '../componen
 //         .then(data => dispatch(heroesFetched(data)))
 //         .catch(() => dispatch(heroesFetchingError()))
 // }
-export const fetchFilters = (request) => (dispatch) => {
-    dispatch(filtersFetching())
-    request(`http://localhost:3001/filters`)
-        .then(data => dispatch(filtersFetched(data)))
-        .catch(() => dispatch(filtersFetchingError()))
-}
+// export const fetchFilters = (request) => (dispatch) => {
+//     dispatch(filtersFetching())
+//     request(`http://localhost:3001/filters`)
+//         .then(data => dispatch(filtersFetched(data)))
+//         .catch(() => dispatch(filtersFetchingError()))
+// }
 
 /* // export const heroesFetching = () => { //!because of HeroesSlice don't need it anymore
 //     return { type: 'HEROES_FETCHING' }
